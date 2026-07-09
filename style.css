@@ -11,6 +11,21 @@
     scroll-behavior:smooth;
 }
 
+:root{
+    --brand:#00695c;
+    --brand2:#009688;
+    --accent:#ff9800;
+    --accentHover:#ff6f00;
+    --text:#333;
+    --muted:#555;
+}
+
+:focus-visible{
+    outline:3px solid rgba(255,152,0,.75);
+    outline-offset:3px;
+}
+
+
 body{
     background:#f5f7fa;
     color:#333;
@@ -28,6 +43,11 @@ body{
     margin:auto;
 }
 
+/* prevent fixed header overlap */
+.page-top{
+    padding-top:140px;
+}
+
 section{
     padding:90px 0;
 }
@@ -35,10 +55,11 @@ section{
 h2{
     text-align:center;
     font-size:42px;
-    color:#00695c;
+    color:var(--brand);
     margin-bottom:60px;
     position:relative;
 }
+
 
 h2::after{
     content:"";
@@ -120,6 +141,7 @@ header{
     background:
     linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
     url(images/hero.jpg);
+
     background-size:cover;
     background-position:center;
     height:100vh;
@@ -157,7 +179,7 @@ header{
 .btn{
     display:inline-block;
     text-decoration:none;
-    background:#ff9800;
+    background:var(--accent);
     color:white;
     padding:15px 40px;
     border-radius:50px;
@@ -165,11 +187,27 @@ header{
     font-weight:600;
 }
 
+@media (prefers-reduced-motion: reduce){
+    *{
+        animation-duration:0.001ms !important;
+        animation-iteration-count:1 !important;
+        transition-duration:0.001ms !important;
+        scroll-behavior:auto !important;
+    }
+}
+
+
 .btn:hover{
-    background:#ff6f00;
+    background:var(--accentHover);
     transform:translateY(-5px);
     box-shadow:0 10px 20px rgba(0,0,0,.3);
 }
+
+.btn:focus-visible,
+.nav ul li a:focus-visible{
+    box-shadow:0 0 0 4px rgba(255,152,0,.25);
+}
+
 
 /* ===========================
    FEATURE BOXES
@@ -575,10 +613,9 @@ padding:70px 0;
 @media(max-width:576px){
 
 .overlay h1{
-
-font-size:30px;
-
+    font-size:30px;
 }
+
 
 .overlay p{
 

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - InAmigos Foundation</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-hero.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -31,7 +33,8 @@
 
 <section class="hero">
 
-    <div class="overlay">
+    <div class="overlay" aria-live="polite">
+
 
         <h1>Let's Build A Better Tomorrow Together</h1>
 
@@ -41,6 +44,20 @@
         </p>
 
         <a href="contact.html" class="btn">Join Us</a>
+        <a href="causes.html" class="btn" style="background:#00695c; margin-left:12px;">Explore Causes</a>
+
+
+
+        <div class="hero-dots" aria-label="Hero slide selector" role="tablist">
+
+            <button type="button" class="hero-dot" aria-label="Show slide 1" data-slide="0" aria-pressed="true"></button>
+            <button type="button" class="hero-dot" aria-label="Show slide 2" data-slide="1" aria-pressed="false"></button>
+            <button type="button" class="hero-dot" aria-label="Show slide 3" data-slide="2" aria-pressed="false"></button>
+
+        </div>
+
+
+
 
     </div>
 
@@ -104,43 +121,62 @@
 
     <h2>Our Projects</h2>
 
-    <div class="container project-grid">
+<div class="container project-grid">
 
         <div class="project-card">
             <img src="seva_enhanced.jpg" alt="Project Seva">
+
             <h3>Project Seva</h3>
             <p>Providing food, clothes and basic necessities to underprivileged families.</p>
+
+            <a class="btn" href="causes.html" style="margin:0 18px 25px; padding:10px 26px;">Read More</a>
         </div>
 
         <div class="project-card">
+
             <img src="bachpan_enhanced.jpg" alt="Project BachpanShala">
             <h3>Project BachpanShala</h3>
             <p>Educating children through free classes and learning initiatives.</p>
+
+            <a class="btn" href="aboutus.html" style="margin:0 18px 25px; padding:10px 26px;">Read More</a>
         </div>
+
 
         <div class="project-card">
             <img src="udaan_enhanced.jpg" alt="Project Udaan">
             <h3>Project Udaan</h3>
             <p>Women empowerment through education, skill development and awareness.</p>
+
+            <a class="btn" href="causes.html" style="margin:0 18px 25px; padding:10px 26px;">Read More</a>
         </div>
+
 
         <div class="project-card">
             <img src="prakriti_enhanced.jpg" alt="Project Prakriti">
             <h3>Project Prakriti</h3>
             <p>Plantation drives and environmental conservation.</p>
+
+            <a class="btn" href="causes.html" style="margin:0 18px 25px; padding:10px 26px;">Read More</a>
         </div>
+
 
         <div class="project-card">
             <img src="jeev_enhanced.jpg" alt="Project Jeev">
             <h3>Project Jeev</h3>
             <p>Animal welfare, rescue and awareness campaigns.</p>
+
+            <a class="btn" href="causes.html" style="margin:0 18px 25px; padding:10px 26px;">Read More</a>
         </div>
+
 
         <div class="project-card">
             <img src="ngovol.png" alt="Project Vikas">
             <h3>Project Vikas</h3>
             <p>Youth leadership, career guidance and skill development.</p>
+
+            <a class="btn" href="causes.html" style="margin:0 18px 25px; padding:10px 26px;">Read More</a>
         </div>
+
 
     </div>
 
@@ -193,6 +229,8 @@
 
 </footer>
 
+<script src="hero.js"></script>
 </body>
 </html>
+
 
